@@ -1,3 +1,3 @@
-streamlit
-pillow
-tensorflow-cpu
+streamlit==1.32.0
+pillow==10.2.0
+tensorflow-cpu==2.15.0
