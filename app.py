@@ -40,5 +40,8 @@ if uploaded_file is not None:
     class_name = class_names[index]
     confidence_score = prediction[0][index]
     
-    st.success(f"**Prediction:** This looks like **{class_name[2:]}**")
+    # Cleaning up the text label from '0 Organic' to just 'Organic'
+    clean_label = class_name.split(' ', 1)[-1] if ' ' in class_name else class_name
+    
+    st.success(f"**Prediction:** This looks like **{clean_label}**")
     st.info(f"**Confidence Level:** {float(confidence_score) * 100:.2f}%")
