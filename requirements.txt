@@ -1,4 +1,4 @@
 streamlit
 pillow
 numpy
-keras-image-helper
+tensorflow-cpu==2.15.0
